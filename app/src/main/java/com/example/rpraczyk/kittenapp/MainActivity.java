@@ -4,12 +4,13 @@ import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
+    final int SCARED_KITTEN_ID = R.drawable.scared_kitten;
+    final int LOVELY_KITTEN_ID = R.drawable.lovely_kitten;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +22,14 @@ public class MainActivity extends AppCompatActivity {
 
         kittenBut.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                kittenImg.setImageResource(R.drawable.scared_kitten);
+                if(kittenImg.getDrawable().getConstantState() == ContextCompat.getDrawable(getBaseContext(), LOVELY_KITTEN_ID).getConstantState()) {
+                    kittenImg.setImageResource(SCARED_KITTEN_ID);
+                    kittenBut.setText(R.string.kitten_button_calm_down);
+                } else
+                {
+                    kittenImg.setImageResource(LOVELY_KITTEN_ID);
+                    kittenBut.setText(R.string.kitten_button_text);
+                }
             }
         });
 
