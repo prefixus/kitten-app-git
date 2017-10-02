@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">KittenApp</string>
+    <string name="kitten_image_description">Kitten!</string>
+    <string name="kitten_button_text">Scare kitten!</string>
+</resources>
