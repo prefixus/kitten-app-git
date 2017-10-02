@@ -15,7 +15,7 @@
         android:id="@+id/kitten_image"
         android:layout_below="@+id/textView"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="300dp"
         android:src="@drawable/lovely_kitten"
         android:layout_marginTop="8dp"
         android:contentDescription="@string/kitten_image_description"

@@ -1,9 +1,10 @@
 package com.example.rpraczyk.kittenapp;
 
+import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 
@@ -20,8 +21,9 @@ public class MainActivity extends AppCompatActivity {
 
         kittenBut.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                kittenImg.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.scared_kitten));
+                kittenImg.setImageResource(R.drawable.scared_kitten);
             }
         });
+
     }
 }
